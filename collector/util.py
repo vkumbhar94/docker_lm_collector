@@ -92,6 +92,7 @@ def get_client(params):
     lm_sdk.configuration.api_key['id'] = params['access_id']
     lm_sdk.configuration.api_key['Authorization'] = params['access_key']
     lm_sdk.configuration.temp_folder_path = config.TEMP_PATH
+    lm_sdk.configuration.verify_ssl = False
 
     # setting proxy
     proxy = parse_proxy(params)
